@@ -1,0 +1,75 @@
+#include <iostream> // I want to use iostream library
+
+int main(){
+	// WHILE loop
+	std::cout << "Enter two numbers: " << std::endl;
+
+	int v1, v2;
+	std::cin >> v1 >> v2;
+	
+	while (v1 < v2) {
+		std::cout << v1 << std::endl;
+		++v1;
+	}
+	//
+
+	// FOR loop
+	int sum = 0;
+	for (int val = -10; val <= 10; ++val)
+		sum += val;
+
+	std::cout << "Sum of -10 to 10 inclusive is " << sum << std::endl;
+	//
+
+	//
+	int sum = 0, val = 0;
+
+	std::cout << "Enter numbers that you want to sum up (Type CTRL+Z to terminate):" << std::endl;
+	while (std::cin >> val)
+		sum += val;
+
+	std::cout << "Sum = " << sum << std::endl;
+	//
+
+	// IF statement
+	int currVal = 0, val = 0;
+
+	if (std::cin >> currVal){ // read the 1st number
+		int cnt = 1;
+		while (std::cin >> val){ // read the following numbers
+			if (val == currVal)
+				++cnt;
+			else {
+				std::cout << currVal << " occurs " << cnt << " times." << std::endl; // print the count of previous value
+				currVal = val;	// set to new value
+				cnt = 1; // reset count
+			}
+		} // end while loop
+		std::cout << currVal << " occurs " << cnt << " times." << std::endl;
+	}
+	//
+
+	int currVal = 0, val = 0, sum = 0;
+
+	std::cout << "Enter consecutive number from 1 to 10:" << std::endl;
+	if (std::cin >> currVal){
+		sum += currVal;
+		
+		while (std::cin >> val && val <= 10){
+			if (val <= currVal){
+				std::cout << "You can't enter a smaller/equal number to the previous one!" << std::endl;
+				std::cout << "Enter again:" << std::endl;
+			}
+			else {
+				currVal = val;
+				sum += val;
+				++val;
+			}
+		}
+		std::cout << "Sum of 1 to 10 consecutively: " << sum << std::endl;
+	}
+	else
+		std::cout << "Fuck You!" << std::endl;
+
+	return 0;
+}
