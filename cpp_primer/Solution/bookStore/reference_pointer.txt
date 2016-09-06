@@ -20,3 +20,8 @@ int ival = 42;
 int *p = &ival; // p holds address of ival; p is a pointer to ival
 std::cout << *p; // * yields the object to which p points; print 42
 *p = 0; // actually assign to ival, now ival = 0
+
+double obj = 3.14, *pd = &obj;
+// ok, void* can hold address value of any data pointer type
+void *pv = &obj;
+pv = pd;
