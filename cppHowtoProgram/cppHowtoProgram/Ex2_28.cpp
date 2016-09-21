@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int main() {
+int ex2_28() {
 	int num;
 	int a;
 	int count = 10000;
