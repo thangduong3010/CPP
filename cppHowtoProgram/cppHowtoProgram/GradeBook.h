@@ -1,26 +1,29 @@
 // GradeBook.h
 #include <string>
 
-using namespace std;
 
 // GradeBook class definition
 class GradeBook {
 public:
-	// constructor initialise courseName with string
-	GradeBook(string, string);
-	// explicit default constructor
-	GradeBook();
-	// function that sets the course name
-	void setCourseName(string);
-	// function that gets the course name
-	string getCourseName();
-	// function that displays a welcome message to the GradeBook user
+	// constructor initialise courseName and instructor name
+	GradeBook(std::string, std::string);
+
+	std::string getCourseName() const;
+	std::string getInstructorName() const;
+
+	void setCourseName(std::string);
+	void setInstructorName(std::string);
+	
+	void determineClassAverage();
+	void inputGrades();
+	
 	void displayMessage();
-	void setInstructorName(string);
-	string getInstructorName();
+	void displayGradeReport();
 	
-	
+	int maximum(int, int, int);
+
 private:
-	string courseName;
-	string instructorName;
+	std::string courseName;
+	std::string instructorName;
+	int maximumGrade;
 }; // end of class

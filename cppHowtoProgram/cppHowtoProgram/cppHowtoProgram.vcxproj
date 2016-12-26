@@ -147,25 +147,33 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Account.cpp" />
+    <ClCompile Include="CreditLimit.cpp" />
     <ClCompile Include="Date.cpp" />
     <ClCompile Include="Employee.cpp" />
     <ClCompile Include="Ex2_19.cpp" />
     <ClCompile Include="Ex2_27.cpp" />
     <ClCompile Include="Ex2_28.cpp" />
+    <ClCompile Include="GasMileage.cpp" />
     <ClCompile Include="GradeBook.cpp" />
     <ClCompile Include="GradeBook.h" />
     <ClCompile Include="HealthProfile.cpp" />
     <ClCompile Include="HeartRates.cpp" />
     <ClCompile Include="Invoice.cpp" />
+    <ClCompile Include="LargestSales.cpp" />
+    <ClCompile Include="SalaryCalculator.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Account.h" />
+    <ClInclude Include="CreditLimit.h" />
     <ClInclude Include="Date.h" />
     <ClInclude Include="Employee.h" />
+    <ClInclude Include="GasMileage.h" />
     <ClInclude Include="HealthProfile.h" />
     <ClInclude Include="HeartRates.h" />
     <ClInclude Include="Invoice.h" />
+    <ClInclude Include="LargestSales.h" />
+    <ClInclude Include="SalaryCalculator.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
